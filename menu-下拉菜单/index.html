@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery滑动横向二级菜单特效</title>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% microsoft yahei;}
+/* menu */
+.menu{height:80px;background:#efefef;position:relative;}
+.menu .nav{width:960px;height:80px;margin:0 auto;}
+.menu .nav li{float:left;font-size:14px;}
+.menu .nav li a{float:left;display:block;height:80px;padding:0 30px;line-height:90px;color:gray;text-decoration:none;position:relative;overflow:hidden;}
+.menu .nav li a:hover,.menu .nav li a.current{background:#000;color:#fff;}
+.menu .nav li .box{width:960px;height:50px;position:absolute;top:80px;left:203px;*left:190px;left:198px\0;background:#000;display:none;}
+.menu .nav li .box a{display:block;height:50px;float:left;color:#fff;line-height:50px;border:none;background:none;padding:0;width:118px;text-align:center;}
+.menu .nav li .box a:hover{text-decoration:underline;color:#46bd01}
+</style>
+
+<script type="text/javascript" src="js/min.js"></script>
+<script type="text/javascript">
+$(function () {
+	var winw = parseInt($(window).width());
+	$('.menu .nav .box').css({'padding-left':(winw-960)/2,'padding-right':(winw-960)/2,'margin-left':-(winw-960)/2});
+	
+	var navLi=$(".menu .nav li");
+	navLi.mouseover(function () {
+		$(this).find("a").addClass("current");
+		$(this).find(".box").stop().slideDown(200);
+	})
+	navLi.mouseleave(function(){
+		$(this).find("a").removeClass("current");
+		$(this).find(".box").stop().slideUp(200);
+	})
+})
+</script>
+</head>
+
+<body>
+	<div class="menu">
+		<ul class="nav">
+			<li>
+				<a href="#">网站首页</a>
+				<div class="box">
+					<a href="#">集团简介</a>
+					<a href="#">品牌历程</a>
+					<a href="#">产企业文化</a>
+					<a href="#">资质荣誉</a>
+					<a href="#">欧路莎商学院</a>
+					<a href="#">爱心公益</a>
+					<a href="#">诚聘英才</a>
+				</div>
+			</li>
+			<li><a href="#">创新技术</a></li>
+			<li>
+				<a href="#">产品中心</a>
+				<div class="box">
+					<a href="#">智能便盖</a>
+					<a href="#">钻石型淋浴房</a>
+					<a href="#">时尚浴室家俬</a>
+					<a href="#">嵌入式</a>
+					<a href="#">古典浴室家俬</a>
+					<a href="#">更多</a>
+				</div>
+			</li>
+			<li>
+				<a href="#">工程项目</a>
+				<div class="box">
+					<a href="#">星级酒店</a>
+					<a href="#">政府工程</a>
+					<a href="#">公告住宅</a>
+					<a href="#">公共减租</a>
+					<a href="#">其他</a>
+				</div>
+			</li>
+			<li><a href="#">服务支持</a></li>
+			<li><a href="#">联系我们</a></li>
+		</ul>
+	</div>
+</body>
+</html>
