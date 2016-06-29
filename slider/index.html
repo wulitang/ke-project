@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>响应式</title>
+<script src="js/min.js"></script>
+<script src="js/jquery.img_silder.js"></script>
+<script>
+        $(function(){
+            $('#silder').imgSilder({
+				s_width:'100%', //容器宽度
+				s_height:450, //容器高度
+				is_showTit:true, // 是否显示图片标题 false :不显示，true :显示
+				s_times:3000, //设置滚动时间
+				css_link:'css/style.css'
+			});
+		});
+    </script>
+</head>
+<body>
+<div class="silder" id="silder">
+  <ul class="silder_list" id="silder_list">
+    <li> <img src="img/1.jpg" border="0"> </li>
+    <li> <img src="img/2.jpg" border="0"> </li>
+    <li> <img src="img/3.jpg" border="0"> </li>
+    <li> <img src="img/4.jpg" border="0"> </li>
+  </ul>
+</div>
+</body>
+</html>
