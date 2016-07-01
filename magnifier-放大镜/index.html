@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜效果</title>
+    <link rel="stylesheet"  type="text/css" href="css/pc.css">
+    <script src="js/jquery-1.4.2.min.js"></script>
+    <script src="js/pc.js"></script>
+</head>
+<body>
+<style></style>
+<div class="box">
+
+    <div class="tb-booth tb-pic tb-s310">
+        <a href="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/01.jpg"><img src="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/01_mid.jpg" alt="美女" rel="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/01.jpg" class="jqzoom" /></a>
+    </div>
+
+    <ul class="tb-thumb" id="thumblist">
+        <li class="tb-selected"><div class="tb-pic tb-s40"><a href="#"><img src="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/01_small.jpg" mid="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/01_mid.jpg" big="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/01.jpg"></a></div></li>
+        <li><div class="tb-pic tb-s40"><a href="#"><img  src="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/02_small.jpg" mid="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/02_mid.jpg" big="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/02.jpg"></a></div></li>
+        <li><div class="tb-pic tb-s40"><a href="#"><img src="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/03_small.jpg" mid="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/03_mid.jpg" big="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/03.jpg"></a></div></li>
+        <li><div class="tb-pic tb-s40"><a href="#"><img src="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/04_small.jpg" mid="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/04_mid.jpg" big="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/04.jpg"></a></div></li>
+        <li><div class="tb-pic tb-s40"><a href="#"><img src="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/05_small.jpg" mid="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/05_mid.jpg" big="http://www.17sucai.com/preview/24363/2013-12-22/jquery.imagezoom_/images/05.jpg"></a></div></li>
+    </ul>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".jqzoom").imagezoom();
+        $("#thumblist li a").click(function(){
+            $(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+            $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+            $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+        });
+
+    });
+</script>
+</body>
+</html>
