@@ -1,0 +1,13 @@
+.inner > .add{display:none;position:absolute;top:-1000000px;visibility:hidden}
+.fdad,.adsbygoogle{display:none;position:absolute;top:-1000000px;visibility:hidden}
+body{background:#EEF2F7;font-family: 'Microsoft Yahei','\5FAE\8F6F\96C5\9ED1','Hiragino Sans GB','\5B8B\4F53',Arial;}
+.fg-box{position:relative; width:330px; height:400px; margin:100px auto; background:#fff; padding:20px 20px 28px;}
+.fg-line{position: absolute; height: 70%; width: 2px; background: #E5EBF0; left: 50px; top: 42px;}
+.fg-box dl{max-height: 360px; overflow: hidden; position: relative;}
+.fg-box dl dd{max-height: 360px; overflow: hidden; position: relative; height:52px; padding:10px 0 10px 80px;}
+.fg-left{padding: 5px 0; position: absolute; background: #FFF; top: 20px; left: 0;}
+.fg-left span{display: inline-block; background-color: #e5ebf0; -webkit-border-radius: 5px; border-radius: 5px; color: #a3b5c8; width: 60px; line-height: 20px; text-align: center; overflow: hidden;}
+.fg-right{position: absolute; top: 10px; left:90px;}
+.fg-right h4{font-size:16px; line-height:38px; color:#46525e; font-weight:normal;}
+.fg-right a{font-size:12px; line-height:16px; color:#a3b5c8;}
+.fg-right a:hover{color:red;}
