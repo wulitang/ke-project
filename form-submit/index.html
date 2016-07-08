@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单提交</title>
+    <link type="text/css" href="css/index.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery171.js"></script>
+    <script type="text/javascript" src="js/form.js"></script>
+</head>
+<body>
+<form class="ke-rz-input" name="offline-form" id="offline-form">
+    <input type="hidden" name="enter_type" id="form-type" value="{%$enter_type%}">
+    <div class="ke-hint-1 hint-message">
+        请输入正确的姓名
+    </div>
+    <div class="ke-hint-2 hint-message">
+        请输入正确的电话
+    </div>
+    <div class="ke-hint-3 hint-message">
+        请输入正确的公司名称
+    </div>
+    <div class="ke-offline-message">
+        <span class="ke-formt">姓 名</span>
+        <input type="text" name="user_name" id="form-name">
+    </div>
+    <div class="ke-offline-message">
+        <span class="ke-formt">电 话</span>
+        <input type="text" name="telephone" id="form-tel">
+    </div>
+    <div class="ke-offline-message message-lose">
+        <span class="ke-formt">公 司 名 称</span>
+        <input type="text" name="company_name" id="form-company">
+    </div>
+    <div class="ke-offline-message">
+        <span class="ke-formt"></span>
+        <input type="button" value="提交资料" class="submit-button" id="now-send">
+    </div>
+</form>
+
+<!--提示框-->
+<div class="ke-tips-bg">
+    <div class="ke-tip-mode" id="tip-mode">
+        <div class="ke-tip-mode-header">
+            入驻申请
+            <a href="javascript:void(0)" class="ke-tip-remove">×</a>
+        </div>
+        <div class="ke-tip-mode-body">
+            <div class="ke-error-show-success">
+                <span class="ke-tip-text">您的资料已成功提交!</span><br/><span class="ke-tip-text1">八戒城市官方顾问会尽快联系您</span>
+            </div>
+            <div class="ke-error-show-fail">
+                <span class="ke-tip-text">您的资料提交失败!</span><br/><span class="ke-tip-text1">请重新填写</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
