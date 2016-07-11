@@ -1,0 +1,162 @@
+/* menu */
+.ke-menu{
+	position:relative;
+	width:1210px;
+	margin:0px auto;
+	height:40px;
+	background-color:#E4393C;
+}
+.ke-menu div{
+	position:absolute;
+	top:0px;
+	height:40px;
+	font-family:"Microsoft Yahei";
+}
+.ke-menu .ke-sort{
+	left:0px;
+	width:210px;
+	text-align:center;
+	font-size:14px;
+}
+.ke-menu .ke-sort a{
+	color:#FFF;
+	display:block;
+	width:100%;
+	height:100%;
+	line-height:40px;
+}
+.ke-menu .ke-img{
+	right:0;
+	width:141px;
+}
+.ke-menu .ke-nav{
+	left:210px;
+}
+.ke-menu .ke-nav ul li{
+	float:left;
+	width:85px;
+	line-height:40px;
+}
+.ke-menu .ke-nav ul li a{
+	display:block;
+	width:100%;
+	color:#FFF;
+	text-align:center;
+	font:700 15px/40px "Microsoft Yahei";
+}
+.ke-menu .ke-nav ul li a:hover, .menu .ke-nav ul li a.current{
+	background:#A40000;
+	text-decoration:none;
+}
+
+.ke-wrap{
+	width:1210px;margin:0 auto;
+}
+.ke-sort-list {
+	position:relative;
+	width:203px;
+	border:2px solid #E4393C;
+	border-top:none;
+	padding:3px 3px 3px 0;
+	background:#FAFAFA;
+}
+.ke-sort-list .ke-item{
+	height:30px;
+	border-top:1px solid #FFFFFF;
+}
+.ke-sort-list .ke-item.bo{
+	border-top:none;
+}
+.ke-sort-list .ke-item h3{
+	height:28px;
+	line-height:28px;
+	border:1px;
+	font-size:14px;
+	font-weight:normal;
+	width:199px;
+	overflow:hidden;
+}
+.ke-sort-list .hover h3{
+	position:relative;
+	z-index:13;
+	background:#FFF;
+	border-color:#DDD;
+	border-width:1px 0px;
+	border-style:solid;
+}
+.ke-sort-list .ke-item span{
+	padding:0 5px;
+	color:#A40000;
+	font-family:"\5B8B\4F53";
+}
+.ke-sort-list .ke-item a{
+	color:#000;
+	text-decoration:none;
+}
+.ke-sort-list .ke-item a:hover{
+	font-weight:bold;
+	color:#E4393C;
+}
+.ke-sort-list .ke-item-list{
+	display:none;
+	position:absolute;
+	width:705px;
+	min-height:200px;
+	_height:200px;
+	background:#FFF;
+	left:198px;
+	box-shadow:0px 0px 10px #DDDDDD;
+	border:1px solid #DDD;
+	top:3px;
+	z-index:10;
+}
+.ke-sort-list .ke-item-list .ke-close{
+	position:absolute;
+	width:26px;
+	height:26px;
+	color:#FFFFFF;
+	cursor:pointer;
+	top:-1px;
+	right:-26px;
+	font-size:20px;
+	line-height:20px;
+	text-align:center;
+	font-family:"Microsoft Yahei";
+	background:rgba(0, 0, 0, 0.6);
+	background-color:transparent\9;
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, startColorstr='#60000000', endColorstr='#60000000');
+}
+
+.ke-item-list .ke-subitem{
+	float:left;
+	width:477px;
+	padding:0 4px 0 8px;
+}
+.ke-item-list .ke-subitem dl{
+	border-top:1px solid #EEE;
+	padding:6px 0;
+	overflow:hidden;
+	zoom:1;
+}
+.ke-item-list .ke-subitem .fore1{
+	border-top:none;
+}
+.ke-item-list .ke-subitem dt{
+	float:left;
+	width:54px;
+	line-height:22px;
+	text-align:right;
+	padding:3px 6px 0 0;
+	font-weight:700;
+	color:#E4393C;
+}
+.ke-item-list .ke-subitem dt a{color:#E4393C;text-decoration:underline;}
+.ke-item-list .ke-subitem dd{float:left;width:415px;padding:3px 0px 0px;overflow:hidden;}
+.ke-item-list .ke-subitem dd em{float:left;height:14px;line-height:14px;padding:0px 8px;margin-top:5px;border-left:1px solid #CCC;}
+.ke-item-list .ke-subitem dd em a, .ke-item-list .cat-right dd a{color:#666;text-decoration:none;}
+.ke-item-list .ke-subitem dd em a:hover, .ke-item-list .cat-right dd a:hover{font-weight:normal;text-decoration:underline;}
+.ke-item-list .cat-right{float:right;width:210px;}
+.ke-item-list .cat-right dl{width:194px;padding:6px 8px;}
+.ke-item-list .cat-right dd{padding-top:6px;line-height:22px;overflow:hidden;padding:3px 0px 0px;}
+.ke-item-list .cat-right dt{padding:3px 6px 0px 0px;font-weight:700;color:#E4393C; }
+.ke-item-list .cat-right dd a:hover{color:#666;}
