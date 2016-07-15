@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对话框/弹出层</title>
+    <link type="text/css" href="css/index.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+</head>
+<body>
+        <input type="button" value="提交资料" class="submit-button" id="now-send">
+<!--提示框-->
+<div class="ke-tips-bg">
+    <div class="ke-tip-mode" id="tip-mode">
+        <div class="ke-tip-mode-header">
+            入驻申请
+            <a href="javascript:void(0)" class="ke-tip-remove">×</a>
+        </div>
+        <div class="ke-tip-mode-body">
+            <div class="ke-error-show-success">
+                <span class="ke-tip-text">您的资料已成功提交!</span><br/><span class="ke-tip-text1">我们会尽快联系您</span>
+            </div>
+            <div class="ke-error-show-fail">
+                <span class="ke-tip-text">您的资料提交失败!</span><br/><span class="ke-tip-text1">请重新填写</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

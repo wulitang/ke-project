@@ -47,9 +47,8 @@ $(function() {
         function() {
 
         });
-});
 //ajax 表单提交
-$("#now-send").click(function() {
+$("#now-send").click(function(e) {
     e.preventDefault();
     var user_name = $("#form-name").val();
     var telephone = $("#form-tel").val();
@@ -129,10 +128,10 @@ $("#tip-mode").find(".ke-tip-remove").click(function(e) {
     $(".ke-error-show-success").hide();
     $(".ke-error-show-fail").hide();
 });
-$("body").click(function(){
-    $("#tip-mode").hide();
+$(".ke-tips-bg").click(function(){
     $(".ke-tips-bg").hide();
     $(".ke-error-show-success").hide();
     $(".ke-error-show-fail").hide();
+});
 });
 
