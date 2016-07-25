@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+        <title>演示：jwplayer兼容各种视频格式播放</title>
+        <meta name="keywords" content="jwplayer在线视频,媒体视频播放器" />
+        <meta name="description" content="前段时间在群里有个叫詹总的，要求能在线播放各类视频，前一篇文章视频播放jppalyer不能兼容mp4等视频格式。恰到坛子里闲逛时，发现了这款视频神器，遂把这些整理了下分享给大家。" />
+        <link rel="stylesheet" type="text/css" href="http://www.sucaihuo.com/jquery/css/common.css" />
+        <style type="text/css">
+            .stars{color:#ff6600;height:30px;line-height: 30px;font-size: 13px;margin: 0 0 20px}
+            .tip{position:absolute;top:0;left:0;z-index:9999;border: 1px solid #D6D6D6;padding:5px 12px;background-color: #FFF;display: none;color:#FF6600;}
+            .intro{margin-left:8px;color:#1B1B1B}
+            .stars img{vertical-align: top;position: relative;top:4px;cursor:pointer;}
+            .stars label{width:70px;display: inline-block;color:#333}
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <div class="head_inner clearfix">
+                <ul id="nav">
+                    <li><a href="http://www.sucaihuo.com">首 页</a></li>
+                    <li><a href="http://www.sucaihuo.com/templates">网站模板</a></li>
+                    <li><a href="http://www.sucaihuo.com/js">网页特效</a></li>
+                    <li><a href="http://www.sucaihuo.com/php">PHP</a></li>
+                    <li><a href="http://www.sucaihuo.com/site">精选网址</a></li>
+                </ul>
+                <a class="logo" href="http://www.sucaihuo.com"><img src="http://www.sucaihuo.com/Public/images/logo.jpg" alt="素材火logo" /></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="demo">
+                <h2 class="title"><a href="http://www.sucaihuo.com/js/145.html">教程：jwplayer兼容各种视频格式播放</a></h2>
+                <div id="jwplayer" style="background: transparent !important; margin:0 auto; width:400px; height:270px; overflow:hidden;">
+                    <div id="player"></div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            Powered by sucaihuo.com  本站皆为作者原创，转载请注明原文链接：<a href="http://www.sucaihuo.com" target="_blank">www.sucaihuo.com</a>
+        </div>
+        <script type="text/javascript" src="jwplayer/jwplayer.js"></script>
+        
+        <script type="text/javascript">
+		
+		
+            jwplayer("player").setup({//通过js调用播放器并安装到指定容器（#player）内
+                skin: "jwplayer/glow.zip", //填写皮肤swf文件的直链地址
+                stretching: "fill", //锁定高宽比填满屏幕
+                flashplayer: "jwplayer/player.swf", //调用播放器
+                image: "jwplayer/screen.jpg", //视频预览图片
+                width: 400, //播放器宽
+                height: 270,
+                levels: [{file: "jwplayer/video.mp4"}] ////调用视频文件
+            });
+        </script>
+        <script type="text/javascript">
+//        var thePlayer;  //保存当前播放器以便操作  
+//        $(function() {  
+//            thePlayer = jwplayer('container').setup({  
+//                flashplayer: 'js/plugins/mediaplayer-5.7/player.swf',  
+//                file: 'js/plugins/mediaplayer-5.7/video.mp4',  
+//                width: 500,  
+//                height: 350,  
+//                dock: false  
+//            });  
+//              
+//            //播放 暂停  
+//            $('.player-play').click(function() {  
+//                if (thePlayer.getState() != 'PLAYING') {  
+//                    thePlayer.play(true);  
+//                    this.value = '暂停';  
+//                } else {  
+//                    thePlayer.play(false);  
+//                    this.value = '播放';  
+//                }  
+//            });  
+//              
+//            //停止  
+//            $('.player-stop').click(function() { thePlayer.stop(); });  
+//              
+//            //获取状态  
+//            $('.player-status').click(function() {  
+//                var state = thePlayer.getState();  
+//                var msg;  
+//                switch (state) {  
+//                    case 'BUFFERING':  
+//                        msg = '加载中';  
+//                        break;  
+//                    case 'PLAYING':  
+//                        msg = '正在播放';  
+//                        break;  
+//                    case 'PAUSED':  
+//                        msg = '暂停';  
+//                        break;  
+//                    case 'IDLE':  
+//                        msg = '停止';  
+//                        break;  
+//                }  
+//                alert(msg);  
+//            });  
+//              
+//            //获取播放进度  
+//            $('.player-current').click(function() { alert(thePlayer.getPosition()); });  
+//      
+//            //跳转到指定位置播放  
+//            $('.player-goto').click(function() {  
+//                if (thePlayer.getState() != 'PLAYING') {    //若当前未播放，先启动播放器  
+//                    thePlayer.play();  
+//                }  
+//                thePlayer.seek(30); //从指定位置开始播放(单位：秒)  
+//            });  
+//              
+//            //获取视频长度  
+//            $('.player-length').click(function() { alert(thePlayer.getDuration()); });  
+//        });  
+        </script>  
+    </body>
+</html>
