@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+<style>
+/*-------友情链接----------*/
+.link h4 { font-size:1.6em; color:#cb0202; margin:0.4em 0; font-weight:500;}
+.link { position:relative; width:1200px; overflow:hidden; margin-bottom:0.8em;}
+.link .prev,.inner .next {font-size:0px;  display:block; height:0px;}
+.link .prev { height:0px; font-size:20px;}
+.link .next { height:0px;font-size:10px; float:right; }
+.img-list { position:relative; width:1200px; height:68px;  overflow:hidden}
+.img-list ul { width:9999px;}
+.img-list li { float:left; display:inline; width:189px; border:solid 1px #dddede; margin-right:13px; height:68px;  text-align:center; line-height:68px;}
+/*-------友情链接----------*/
+.links h4 { font-size:1.6em; color:#cb0202; margin:0.4em 0; font-weight:500;}
+.links { position:relative; width:1200px; overflow:hidden; margin-bottom:0.8em;}
+.links .prev1,.inner .next1 {font-size:0px;  display:block; height:0px;}
+.links .prev1 { height:0px; font-size:20px;}
+.links .next1 { height:0px;font-size:10px; float:right; }
+.img-list1 { position:relative; width:1200px; height:68px;  overflow:hidden}
+.img-list1 ul { width:9999px;}
+.img-list1 li { float:left; display:inline; width:189px; border:solid 1px #dddede; margin-right:13px; height:68px;  text-align:center; line-height:68px;}
+</style>
+</head>
+
+<body>
+ <div class="link">
+    <h4>友情链接</h4>
+        <div class="img-list">
+        <span class="prev">prev</span>
+        <span class="next">next</span>
+          <ul>
+   
+   <li><a href="http://www.diguo007.com"target="_blank"><img src="http://hq86.org/d/file/3c595bc6b3fa118eaec08b278e1eeeb9.jpg" height="66" width="187"/></a></li>  
+     
+   <li><a href="http://www.hq86.org"target="_blank"><img src="http://hq86.org/d/file/d9a5b14977fe8f00a95981640e621773.png" height="66" width="187"/></a></li>  
+     
+   <li><a href="http://www.fjzt007.com"target="_blank"><img src="http://hq86.org/d/file/40a37151c2c1b1d195bba9e6e3858469.png" height="66" width="187"/></a></li>  
+     
+   <li><a href="http://www.hq86.org"target="_blank"><img src="http://hq86.org/d/file/0134ada6a8c230c830255efbe72ba4e2.jpg" height="66" width="187"/></a></li>  
+     
+   <li><a href="http://www.hq86.org"target="_blank"><img src="http://hq86.org/d/file/cf8c460c0e8c6b00eaa8a330b864dbd1.jpg" height="66" width="187"/></a></li>  
+     
+   <li><a href="http://www.hq86.org"target="_blank"><img src="http://hq86.org/d/file/5fb5c040c91cba3228fe985bc60caec7.jpg" height="66" width="187"/></a></li>  
+             </ul>
+        </div>
+    </div>
+    
+    
+    <div class="links">
+    <h4>友情链接</h4>
+        <div class="img-list1">
+        <span class="prev1">prev</span>
+        <span class="next1">next</span>
+          <ul>
+   
+   <li><a href="http://www.diguo007.com"target="_blank"><img src="http://hq86.org/d/file/3c595bc6b3fa118eaec08b278e1eeeb9.jpg" height="66" width="187"/></a></li>  
+     
+   <li><a href="http://www.hq86.org"target="_blank"><img src="http://hq86.org/d/file/d9a5b14977fe8f00a95981640e621773.png" height="66" width="187"/></a></li>  
+     
+   <li><a href="http://www.fjzt007.com"target="_blank"><img src="http://hq86.org/d/file/40a37151c2c1b1d195bba9e6e3858469.png" height="66" width="187"/></a></li>  
+     
+   <li><a href="http://www.hq86.org"target="_blank"><img src="http://hq86.org/d/file/0134ada6a8c230c830255efbe72ba4e2.jpg" height="66" width="187"/></a></li>  
+     
+   <li><a href="http://www.hq86.org"target="_blank"><img src="http://hq86.org/d/file/cf8c460c0e8c6b00eaa8a330b864dbd1.jpg" height="66" width="187"/></a></li>  
+     
+   <li><a href="http://www.hq86.org"target="_blank"><img src="http://hq86.org/d/file/5fb5c040c91cba3228fe985bc60caec7.jpg" height="66" width="187"/></a></li>  
+             </ul>
+        </div>
+    </div>
+ <script type="text/javascript">
+    function DY_scroll(wraper,prev,next,img,speed,or)
+    {
+    var wraper = $(wraper);
+    var prev = $(prev);
+    var next = $(next);
+    var img = $(img).find('ul');
+    var w = img.find('li').outerWidth(true);
+    var s = speed;
+    next.click(function()
+    {
+    img.animate({'margin-left':-w},function()
+    {
+    img.find('li').eq(0).appendTo(img);
+    img.css({'margin-left':0});
+    });
+    });
+    prev.click(function()
+    {
+    img.find('li:last').prependTo(img);
+    img.css({'margin-left':-w});
+    img.animate({'margin-left':0});
+    });
+    if (or == true)
+    {
+    ad = setInterval(function() { next.click();},s*1000);
+    wraper.hover(function(){clearInterval(ad);},function(){ad = setInterval(function() { next.click();},s*1000);});
+    }
+    }
+    DY_scroll('.link','.prev','.next','.img-list',3,true);// true为自动播放，不加此参数或false就默认不自动
+	DY_scroll('.links','.prev1','.next1','.img-list1',2,true);// true为自动播放，不加此参数或false就默认不自动
+    </script>
+</body>
+</html>
